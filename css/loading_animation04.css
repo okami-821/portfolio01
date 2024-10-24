@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  /* color: #fff; */
+  /* overflow: hidden; */
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  z-index: 555;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bland {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bland span  {
+  font-size: 80px;
+  font-weight: bold;
+  color:#FFF;
+  font-family: "didot";
+  writing-mode: vertical-lr;
+  margin: 0;
+  line-height: .9;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.loaded {
+  animation: fadeOut 1s;
+  animation-fill-mode: both;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.gallery {
+  width: 100%;
+  height: 100vh;
+}
+.gallery img {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* CSSのみ */
+/* .box {
+  max-width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.box .bgimg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  animation-name: bgAnime;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.box .src1 {
+  background-image: url(../img/mv02.jpg);
+}
+.box .src2 {
+  background-image: url(../img/mv01.jpg);
+  animation-delay: 9s;
+}
+@keyframes bgAnime {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+} */
+
+/* JSⅠ */
+/* #changePic {
+  animation: imgfade 8s infinite ease-in-out;
+  opacity: 0;
+}
+@keyframes imgfade {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media (min-width: 900px) {
+  .box .bgimg {
+    background-position: top;
+  }
+} */
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.image {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+}
